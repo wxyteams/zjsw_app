@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ZJSW.iml" filepath="$PROJECT_DIR$/.idea/ZJSW.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/DelegationAdapter/delegationadapter.iml" filepath="$PROJECT_DIR$/DelegationAdapter/delegationadapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zjsw_app.iml" filepath="$PROJECT_DIR$/zjsw_app.iml" />
     </modules>
   </component>
 </project>
