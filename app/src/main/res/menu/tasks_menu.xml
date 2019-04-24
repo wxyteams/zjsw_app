@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tasks_filter"
+        android:layout_gravity="center"
+        android:icon="@drawable/filter"
+        android:title="筛选"
+        app:showAsAction="always"
+        app:itemIconTint="#0C0C0C">
+        <menu>
+            <item
+                android:id="@+id/tasks_all"
+                android:layout_gravity="center"
+                android:title="全部任务"
+                app:itemIconTint="#0C0C0C" />
+            <item
+                android:id="@+id/tasks_polling"
+                android:layout_gravity="center"
+                android:title="巡检任务"
+                app:itemIconTint="#0C0C0C" />
+            <item
+                android:id="@+id/tasks_install"
+                android:layout_gravity="center"
+                android:title="报装任务"
+                app:itemIconTint="#0C0C0C" />
+            <item
+                android:id="@+id/tasks_prospecting"
+                android:layout_gravity="center"
+                android:title="勘查任务"
+                app:itemIconTint="#0C0C0C" />
+        </menu>
+    </item>
+</menu>

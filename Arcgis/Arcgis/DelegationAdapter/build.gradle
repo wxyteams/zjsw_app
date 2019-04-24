@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 12
+        versionName "1.1.5"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compileOnly 'com.android.support:recyclerview-v7:26.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+//------
+apply plugin: 'org.jetbrains.dokka-android'
+
+task generateSourcesJar(type: Jar) {
+    group = 'jar'
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    options.encoding = "UTF-8"
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = "javadoc"
+    outputDirectory = javadoc.destinationDir
+}
+
+task generateJavadoc(type: Jar, dependsOn: dokkaJavadoc) {
+    group = 'jar'
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+//------
+
+// Release jcenter configuration
+//setProperty "POM_ARTIFACT_ID", "delegationadapter"
+//setProperty "PROJECT_NAME", "DelegationAdapter"
+//setProperty "VERSION_CODE", "12"
+//setProperty "VERSION_NAME", "1.1.5"
+//setProperty "POM_DESCRIPTION", "Delegation Adapter"
+
+ext {
+    kevinSourceDocFiles = [rootProject.file('gradle/android-sources-docs.gradle')]
+}
+//apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

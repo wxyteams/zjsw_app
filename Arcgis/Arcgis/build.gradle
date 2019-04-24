@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.21'
+    repositories {
+        google()
+        jcenter()
+
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+
+        // Add ArcGIS Runtime SDK for Android dependency
+        classpath 'com.esri.arcgis.android:arcgis-android:10.2.9'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //noinspection GradleDependency
+        classpath 'com.android.support:support-v4:23.1.1'
+        classpath 'com.nineoldandroids:library:2.4.0'
+        classpath 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+        classpath 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.jetbrains.dokka:dokka-gradle-plugin:0.9.17'
+        classpath 'org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.17'
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

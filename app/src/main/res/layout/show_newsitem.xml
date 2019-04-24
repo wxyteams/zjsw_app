@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar111"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="9dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/newsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="新闻详情"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|center_vertical"
+        android:text="停水公告"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/newsContent"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|center_vertical"
+        android:text="  public int getCount() {//lv.setAdapter执行的时候就会调用getCount方法就会调用getView方法，
+                            //所以要不保证lv.setAdapter执行的时候newsList已经初始化好了，不然就会有空指针，
+                            //因此lv.setAdapter执行在子线程中的newsList初始化之后，
+                            //由于lv.setAdapter是修改UI所以只能通过子线程发送消息给主线程进行UI修改
+            return newsList.size(); public int getCount() {//lv.setAdapter执行的时候就会调用getCount方法就会调用getView方法，
+                            //所以要不保证lv.setAdapter执行的时候newsList已经初始化好了，不然就会有空指针，
+                            //因此lv.setAdapter执行在子线程中的newsList初始化之后，
+                            //由于lv.setAdapter是修改UI所以只能通过子线程发送消息给主线程进行UI修改
+            return newsList.size();"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布时间"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="95dp" />
+</android.support.constraint.ConstraintLayout>
